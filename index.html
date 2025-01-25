@@ -11,52 +11,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filter.js" defer></script>
 </head>
 <body>
     <header class="header">
-    <h1>WDD 231 - Web Frontend Development - Daniel Gonzalez</h1>
+    <div class="header-content">
+    <img src="images/daniel.webp" alt="myself">    
+    <h1>-  Daniel Gonzalez</h1>
+    </div>
     <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="#">Chamber</a>
+        <a href="#">GitHub Profile</a>
         <a href="https://www.linkedin.com/in/danielgonzalez-dev/">LinkedIn</a>
-        <a href="https://byupw.instructure.com/">Canvas</a>
-        <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/41?lang=spa">Scripture</a>
-        <a href="#">Final Project</a>
     </nav>
     </header>
     <main class="main">
-      <section class="card-1">
-        <h2>About Me</h2>
-        <div class="card-1-content">
-            <div class="content-card-1">
-            <p>My name is Daniel Gonzalez. I am from Venezuela and live with my family in Cumaná. I am currently working as a virtual assistant to a insurance aggent, but I am also learning to code.</p>
-            <h5>Cumana, Venezuela</h5>
-            <hr>
-                <div class="info-content-card-1">
-                    <div class="img-card-1">
-                    <img src="images/venezuela.jpg" alt="flag">
-                    <p>Official Flag of Venezuela</p>
+        <section class="card-1">
+            <h2>Course Work</h2>
+            <div class="card-1-content">
+                <div class="content-card-1">
+                    <div class="info-content-card-1">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
                     </div>
-                    <p>Venezuela is a South American country known for its stunning landscapes, including beaches, mountains, and plains, as well as its rich cultural heritage. Its capital is Caracas, and it holds one of the world's largest oil reserves.</p>
-
                 </div>
             </div>
-            <div class="img2-card-1 content-card-1">
-            <img src="images/daniel.webp" alt="myself">
-            <p></p>
+        </section>
+        <section class="card-2">
+            <h2>Cumaná, Venezuela</h2>
+            <div class="img-card-2">
+                <img src="images/venezuela.jpg" alt="flag">
+                <p>Official Flag of Venezuela</p>
             </div>
-        </div>
-      </section>
-      <section class="card-2">
-        <h2>Web Dev Resources</h2>
-        <ul>
-            <li><a href="https://animista.net/">Animista</a></li>
-            <li><a href="https://fonts.google.com/">Google Fonts</a></li>
-            <li><a href="https://iconscout.com/unicons">IconScout</a></li>
-            <li><a href="https://www.toools.design/">Toools.Design</a></li>
-            <li><a href="https://picsum.photos/">Picsum</a></li>
-            <li><a href="https://squoosh.app/">Squoosh</a></li>
-        </ul>
-      </section>
+        </section>
+        
+        <section class="card-3">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="content-card-3">
+                <div class="classes">
+                    <button id="all" class="filter-btn">All</button>
+                    <button id="cse" class="filter-btn">CSE</button>
+                    <button id="wdd" class="filter-btn">WDD</button>
+                </div>
+                <hr>
+                <div class="all-classes">
+                    <ul>
+                        <li class="cse">CSE 110</li>
+                        <li class="wdd">WDD 130</li>
+                        <li class="cse">CSE 111</li>
+                        <li class="cse">CSE 210</li>
+                        <li class="wdd">WDD 131</li>
+                        <li class="wdd">WDD 231</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+    
     <footer class="footer">
         <p>&copy; <span id="currentyear"></span> | Daniel Gonzalez | Venezuela</p>
         <p id="lastModified"></p>
