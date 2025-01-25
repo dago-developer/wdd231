@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    background-color: #1b6fab;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    font-weight: 500;
+    justify-content: space-around;
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+nav a { 
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+
+nav a:hover {
+    background-color: #666;
+}
+
+.main {
+    display: grid; 
+    grid-template-columns: 3fr 1fr; /* 75% main column, 25% aside */
+    grid-template-rows: auto; 
+    gap: 1rem; 
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100% - 6rem);
+    padding: 1rem;
+}
+
+.card-1 {
+    background-color: #f4f4f4;
+
+    border: 1px solid #ddd;
+    border-radius: 20px
+}
+
+h2 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #1b6fab;
+    border-top-left-radius:  20px;
+    border-top-right-radius:  20px;
+    
+    
+}
+
+.card-1-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 75% main column, 25% aside */
+    grid-template-rows: auto; 
+    gap: 1rem;
+}
+
+.content-card-1{
+    padding: 20px;
+}
+
+.content-card-1 h5{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-content-card-1 {
+    display: flex;
+    gap: 1rem;
+}
+
+.info-content-card-1 > div > p {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-content-card-1 > p {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-2 {
+    background-color: #ddd;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+ 
+}
+
+.card-2 ul {
+    padding: 30px;
+}
+
+
+
+img {   
+    width: 200px;
+    
+}
+
+hr {    
+    width: 80%;
+    margin: 0 auto; 
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
