@@ -1,0 +1,58 @@
+[
+    {
+        "name": "ElectroCumaná",
+        "address": "Av. 5 de Julio, Cumaná, Venezuela",
+        "phone": "+58 414-555-1234",
+        "website": "https://electrocumana.com",
+        "image": "electrocumana.webp",
+        "membership": 3
+    },
+    {
+        "name": "Panadería La Cumanesa",
+        "address": "Calle Sucre, Cumaná, Venezuela",
+        "phone": "+58 292-555-5678",
+        "website": "https://lacumanesa.com",
+        "image": "panaderiacumana.webp",
+        "membership": 2
+    },
+    {
+        "name": "Tiendas El Sol",
+        "address": "Calle Bolívar, Cumaná, Venezuela",
+        "phone": "+58 292-555-9101",
+        "website": "https://tiendaselsol.com",
+        "image": "tiendaelsol.webp",
+        "membership": 1
+    },
+    {
+        "name": "Mueblería Cumaná",
+        "address": "Av. Universidad, Cumaná, Venezuela",
+        "phone": "+58 292-555-0000",
+        "website": "https://muebleriacumana.com",
+        "image": "muebleria.webp",
+        "membership": 3
+    },
+    {
+        "name": "Zapatería Cumaná",
+        "address": "Calle La Marina, Cumaná, Venezuela",
+        "phone": "+58 292-555-3333",
+        "website": "https://zapateriacumana.com",
+        "image": "zapateriacumana.webp",
+        "membership": 2
+    },
+    {
+        "name": "Ferretería El Progreso",
+        "address": "Calle Las Palmas, Cumaná, Venezuela",
+        "phone": "+58 292-555-7777",
+        "website": "https://ferreteriaelprogreso.com",
+        "image": "ferreteriacumana.webp",
+        "membership": 1
+    },
+    {
+        "name": "Farmacia Cumaná",
+        "address": "Av. Cumanagoto, Cumaná, Venezuela",
+        "phone": "+58 292-555-8888",
+        "website": "https://farmaciacumana.com",
+        "image": "farmaciacumana.webp",
+        "membership": 3
+    }
+]

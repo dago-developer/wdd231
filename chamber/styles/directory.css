@@ -1,44 +1,191 @@
-* {
+/* Define variables de colores y tipografía */
+:root {
+    --primary-color: #004466;
+    --secondary-color: #FFA500;
+    --background-color: #F4F4F4;
+    --text-color: #333333;
+    --font-family: "Poppins", sans-serif;
+}
+
+/* General Styles */
+html, body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
     height: 100%;
-    width: 100%;
-    font-family: "Poppins", serif;
-    font-weight: 400;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
-header {
-    background-color: #1b6fab;
+/* Header */
+.header {
+    background-color: var(--primary-color);
     color: white;
+    padding: 10px;
     text-align: center;
-    padding: 1rem;
-    width: 100%;
+}
+
+.logo {
+    max-width: 150px;
 }
 
 .header-content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+
+    text-align: center;
+    flex: 1;
+}
+
+/* Estilo del banner */
+.banner {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 60px; /* Reducimos la altura */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem; /* Tamaño de texto más equilibrado */
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 100vw; /* Ahora ocupa todo el ancho de la pantalla */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.header-content img {
-    width: 100px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+/* Animación de iluminación */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    transform: rotate(25deg);
+    animation: shine 4s infinite linear;
+}
+
+/* Animación de brillos */
+@keyframes shine {
+    0% {
+        transform: rotate(25deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(25deg) translate(50%, 50%);
+    }
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 100px; /* Más pequeño en pantallas móviles */
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilo de la tarjeta */
+.directory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-name {
+    font-size: 1.5rem;
+    color: #004466;
+    margin: 10px 0;
+}
+
+.card-address,
+.card-phone,
+.card-membership {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.card-website {
+    color: #FFA500;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-website:hover {
+    text-decoration: underline;
 }
 
 
-footer {
-    background-color: #333;
+
+.footer {
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
     width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        display: block;
+        margin: 5px 0;
+    }
 }
