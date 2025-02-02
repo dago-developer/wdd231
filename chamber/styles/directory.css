@@ -1,4 +1,4 @@
-/* Define variables de colores y tipografía */
+
 :root {
     --primary-color: #004466;
     --secondary-color: #FFA500;
@@ -7,7 +7,6 @@
     --font-family: "Poppins", sans-serif;
 }
 
-/* General Styles */
 html, body {
     font-family: var(--font-family);
     background-color: var(--background-color);
@@ -20,16 +19,16 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Header */
 .header {
     background-color: var(--primary-color);
     color: white;
     padding: 10px;
     text-align: center;
+    
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 130px;
 }
 
 .header-content {
@@ -51,33 +50,41 @@ html, body {
     color: var(--secondary-color);
 }
 
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
 main {
 
     text-align: center;
     flex: 1;
 }
 
-/* Estilo del banner */
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 60px; /* Reducimos la altura */
+    height: 60px; 
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-transform: uppercase;
-    font-size: 1rem; /* Tamaño de texto más equilibrado */
+    font-size: 1rem; 
     font-weight: bold;
     letter-spacing: 2px;
-    width: 100vw; /* Ahora ocupa todo el ancho de la pantalla */
+    width: 100vw; 
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-/* Animación de iluminación */
 .banner::before {
     content: "";
     position: absolute;
@@ -90,7 +97,6 @@ main {
     animation: shine 4s infinite linear;
 }
 
-/* Animación de brillos */
 @keyframes shine {
     0% {
         transform: rotate(25deg) translate(-50%, -50%);
@@ -100,20 +106,35 @@ main {
     }
 }
 
-/* Responsivo */
-@media screen and (max-width: 768px) {
-    .banner {
-        height: 100px; /* Más pequeño en pantallas móviles */
-        font-size: 1.5rem;
-    }
-}
-
-/* Estilo de la tarjeta */
-.directory-container {
+.grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+.grid-view .card-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.list-view {
+    display: block;
+    padding: 20px;
+}
+
+.list-view .card .card-image {
+    width: 30%;  
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.list-view .card {
+    margin-bottom: 30px;  
 }
 
 .card {
@@ -130,15 +151,10 @@ main {
     transform: translateY(-10px);
 }
 
-.card-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
 .card-name {
     font-size: 1.5rem;
-    color: #004466;
+    color: var(--primary-color); 
     margin: 10px 0;
 }
 
@@ -151,7 +167,7 @@ main {
 }
 
 .card-website {
-    color: #FFA500;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
@@ -162,6 +178,28 @@ main {
 }
 
 
+#toggleViewBtn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 200px; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#toggleViewBtn:hover {
+    background-color: var(--secondary-color);
+}
 
 .footer {
     background-color: var(--primary-color);
@@ -173,19 +211,37 @@ main {
     width: 100%;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
+
+    .view-toggle {
+        display: none;
+    }
+    
     .header-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .nav {
+      .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-color);
+        padding: 10px 0;
         margin-top: 10px;
     }
 
-    .nav a {
+    .nav-toggle {
         display: block;
-        margin: 5px 0;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        color: var(--secondary-color);
     }
+
+    .header.open .nav {
+        display: flex;
+    }
+
 }
