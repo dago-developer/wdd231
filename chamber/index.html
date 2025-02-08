@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Directory</title>
+        <link rel="stylesheet" href="styles/directory.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <meta name="description" content="This is the directory page for WDD 231 - Web Frontend Development.">
+        <meta name="author" content="Daniel Gonzalez">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+        <script src="../scripts/getdates.js" defer></script>
+        <script src="./scripts/weather.js" defer></script>
+
+    </head>
+<body>
+    <header class="header">
+        <div class="header-content">
+        <img class="logo" src="images/Cumana_logo.png" alt="logo">
+        <h1>Chamber of Commerce</h1>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+        </div>
+        <button id="nav-toggle" class="nav-toggle">
+            &#9776; 
+        </button>
+        </header>
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <img src="images/cumana.webp" alt="Hero Image">
+                <div class="hero-text">
+                    <h2>Welcome to the Chamber of Commerce</h2>
+                    <p>Your gateway to business connections in Cumaná.</p>
+                    <a href="#" class="cta-button">Join Now</a>
+                </div>
+            </section>
+
+            <!-- Current Events Section -->
+            <section class="current-events">
+                <h3>Current Events</h3>
+                <div class="event">
+                    <h4>Business Expo 2025</h4>
+                    <p>Join us for the annual Business Expo, showcasing local businesses and services.</p>
+                </div>
+                <div class="event">
+                    <h4>Networking Meet-Up</h4>
+                    <p>Meet fellow business owners and potential clients in a casual environment.</p>
+                </div>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather">
+                <h3>Weather in Cumaná</h3>
+                <div id="weather-data">
+                    <!-- Weather data will be displayed here via JavaScript -->
+                </div>
+            </section>
+
+            <!-- Company Spotlight Section -->
+            <section id="member-spotlights">
+                <h2>Member Spotlights</h2>
+                <!-- Aquí se agregarán las tarjetas de los miembros -->
+                <div id="spotlight-cards">
+                    <!-- Las tarjetas de los miembros se agregarán aquí dinámicamente con JavaScript -->
+                </div>
+            </section>
+
+        </main>
+       
+
+        <footer class="footer">
+            <p>&copy; <span id="currentyear"></span> | Daniel Gonzalez | Venezuela</p>
+            <p id="lastModified"></p>
+        </footer>
+</body>
+</html>

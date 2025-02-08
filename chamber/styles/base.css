@@ -1,0 +1,132 @@
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #1b6fab;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #002664;
+}
+
+.current-events {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.event {
+    margin-bottom: 1rem;
+}
+
+.weather {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+#spotlight-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.member-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 20%;
+    height: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.member-card img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 1rem; 
+}
+
+.member-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.member-card p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  
+    .hero h2 {
+        font-size: 1.8rem; 
+    }
+
+    .hero p {
+        font-size: 1rem; 
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.2rem;
+    }
+
+    #spotlight-cards {
+        flex-direction: column;
+    }
+
+    .member-card {
+        width: 100%; 
+        margin-bottom: 1.5rem; 
+        font-size: 0.9rem; 
+    }
+
+    .member-card h3 {
+        font-size: 1rem; 
+    }
+
+    .member-card p {
+        font-size: 0.8rem; 
+    }
+
+    .current-events {
+        padding: 1rem;
+    }
+}
