@@ -1,0 +1,247 @@
+
+:root {
+    --primary-color: #004466;
+    --secondary-color: #FFA500;
+    --background-color: #F4F4F4;
+    --text-color: #333333;
+    --font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.logo {
+    max-width: 130px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+main {
+
+    text-align: center;
+    flex: 1;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 60px; 
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 100vw; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    transform: rotate(25deg);
+    animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(25deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(25deg) translate(50%, 50%);
+    }
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-view .card-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.list-view {
+    display: block;
+    padding: 20px;
+}
+
+.list-view .card .card-image {
+    width: 30%;  
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.list-view .card {
+    margin-bottom: 30px;  
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card-name {
+    font-size: 1.5rem;
+    color: var(--primary-color); 
+    margin: 10px 0;
+}
+
+.card-address,
+.card-phone,
+.card-membership {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.card-website {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-website:hover {
+    text-decoration: underline;
+}
+
+
+#toggleViewBtn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 200px; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#toggleViewBtn:hover {
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .view-toggle {
+        display: none;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+      .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        color: var(--secondary-color);
+    }
+
+    .header.open .nav {
+        display: flex;
+    }
+
+}
