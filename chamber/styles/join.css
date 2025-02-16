@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #004466;
     --secondary-color: #FFA500;
@@ -24,7 +23,6 @@ html, body {
     color: white;
     padding: 10px;
     text-align: center;
-    
 }
 
 .logo {
@@ -59,124 +57,112 @@ html, body {
     cursor: pointer;
 }
 
-
 main {
-
     text-align: center;
     flex: 1;
+    padding: 20px;
 }
 
-.banner {
+/* Contenedor del formulario y las membresías */
+.form-membership-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 60px; 
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    text-transform: uppercase;
-    font-size: 1rem; 
-    font-weight: bold;
-    letter-spacing: 2px;
-    width: 100vw; 
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.banner::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
-    transform: rotate(25deg);
-    animation: shine 4s infinite linear;
-}
-
-@keyframes shine {
-    0% {
-        transform: rotate(25deg) translate(-50%, -50%);
-    }
-    100% {
-        transform: rotate(25deg) translate(50%, 50%);
-    }
-}
-
-.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
-    padding: 20px;
-}
-
-.grid-view .card-image {
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
 }
 
-.list-view {
-    display: block;
+/* Estilos del formulario */
+.form-container {
+    flex: 0 0 66%;
+    max-width: 66%;
+    min-width: 300px;
+}
+
+form {
+    background: white;
+    width: 100%;
     padding: 20px;
-}
-
-.list-view .card .card-image {
-    width: 30%;  
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-
-.list-view .card {
-    margin-bottom: 30px;  
-}
-
-.card {
-    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
+    box-sizing: border-box; 
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    
+    
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Estilos de los niveles de membresía */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 34%;
+}
+
+.membership-card {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
     padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.membership-card:hover {
+    transform: translateY(-5px);
 }
 
-
-.card-name {
+.membership-card h3 {
+    color: var(--primary-color);
     font-size: 1.5rem;
-    color: var(--primary-color); 
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
-.card-address,
-.card-phone,
-.card-membership {
+.membership-card p {
     font-size: 1rem;
     color: #555;
-    margin: 5px 0;
 }
-
-.card-website {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.card-website:hover {
-    text-decoration: underline;
-}
-
 
 #toggleViewBtn {
     background-color: var(--primary-color);
@@ -188,17 +174,45 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     display: block;
-    width: 200px; 
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    width: 200px;
 }
 
 #toggleViewBtn:hover {
     background-color: var(--secondary-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 400px;
+}
+
+.close-modal {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .footer {
@@ -206,23 +220,17 @@ main {
     color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
+/* Media Queries */
 @media screen and (max-width: 768px) {
-
-    .view-toggle {
-        display: none;
-    }
-    
     .header-content {
         flex-direction: column;
         text-align: center;
     }
 
-      .nav {
+    .nav {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -244,4 +252,21 @@ main {
         display: flex;
     }
 
+    .form-membership-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* Añadir un espacio entre los elementos */
+    }
+
+    .form-container {
+        width: 100%; /* El formulario ocupa el 100% del ancho */
+        max-width: 500px; /* Limitamos el ancho máximo para que no se vea muy grande */
+    }
+
+    .membership-cards {
+        width: 100%; /* Las tarjetas ocupan el 100% del ancho en móviles */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Aseguramos que las tarjetas tengan un buen espacio entre ellas */
+    }
 }
