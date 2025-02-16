@@ -94,8 +94,6 @@ form label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
-    
-    
 }
 
 form input, form select, form textarea {
@@ -243,9 +241,10 @@ form button:hover {
     .nav-toggle {
         display: block;
         position: absolute;
-        right: 40px;
+        right: 20px;
         top: 20px;
-        color: var(--secondary-color);
+        color: white;
+        z-index: 1000;
     }
 
     .header.open .nav {
@@ -255,18 +254,18 @@ form button:hover {
     .form-membership-wrapper {
         flex-direction: column;
         align-items: center;
-        gap: 40px; /* Añadir un espacio entre los elementos */
+        gap: 40px;
     }
 
     .form-container {
-        width: 100%; /* El formulario ocupa el 100% del ancho */
-        max-width: 500px; /* Limitamos el ancho máximo para que no se vea muy grande */
+        width: 100%;
+        max-width: 500px;
     }
 
     .membership-cards {
-        width: 100%; /* Las tarjetas ocupan el 100% del ancho en móviles */
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 20px; /* Aseguramos que las tarjetas tengan un buen espacio entre ellas */
+        gap: 20px;
     }
 }
