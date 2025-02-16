@@ -62,8 +62,6 @@ main {
     flex: 1;
     padding: 20px;
 }
-
-/* Contenedor del formulario y las membresías */
 .form-membership-wrapper {
     display: flex;
     justify-content: space-between;
@@ -74,7 +72,6 @@ main {
     width: 100%;
 }
 
-/* Estilos del formulario */
 .form-container {
     flex: 0 0 66%;
     max-width: 66%;
@@ -128,7 +125,6 @@ form button:hover {
     background-color: var(--secondary-color);
 }
 
-/* Estilos de los niveles de membresía */
 .membership-cards {
     display: flex;
     flex-direction: column;
@@ -221,7 +217,6 @@ form button:hover {
     width: 100%;
 }
 
-/* Media Queries */
 @media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;

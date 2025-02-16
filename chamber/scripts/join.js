@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// script.js (o agregar en tu archivo script actual)
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = document.querySelector('.nav-toggle');
     const header = document.querySelector('.header');
