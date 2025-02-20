@@ -1,0 +1,65 @@
+body {
+    font-family: "Roboto", serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Definir variables de color */
+:root {
+    --primary: #ffaf02;
+    --secondary: #1c8eb8;
+    --trhid: #17254e;
+    --background: #F4F4F4;
+    --text: #333333;
+    --text2: #fff4f4;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary);
+    color: var(--text2);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* TITULOS */
+h2 {
+    color: var(--secondary);
+}
+
+/* COLOR BOXES */
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.primary { background-color: var(--primary); }
+.secondary { background-color: var(--secondary); }	
+.trhid { background-color: var(--trhid); }
+.background { background-color: var(--background); border: 1px solid #ccc; }
+.text { background-color: var(--text); }
+.text2 { background-color: var(--text2); }
+
+.wireframe {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    display: flex;
+
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--trhid);
+    color: white;
+    border-radius: 5px;
+}
