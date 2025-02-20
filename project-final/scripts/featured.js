@@ -32,32 +32,41 @@ const places = [
     }
 ];
 
-function getRandomPlaces(count) {
-    let shuffled = [...places].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+// Función para obtener lugares aleatorios sin repetición
+function getRandomPlaces(count, exclude = []) {
+    let shuffled = [...places].filter(place => !exclude.includes(place)); // Excluye lugares ya usados
+    shuffled.sort(() => 0.5 - Math.random()); // Mezcla aleatoriamente
+    return shuffled.slice(0, count); // Retorna la cantidad deseada
 }
 
-function displayFeaturedActivities(containerId) {
+function displayFeaturedActivities(containerId, usedPlaces = []) {
     const container = document.getElementById(containerId);
     container.innerHTML = ""; 
 
-    const selectedPlaces = getRandomPlaces(2); 
+    const selectedPlaces = getRandomPlaces(2, usedPlaces);
 
     selectedPlaces.forEach(place => {
-        const card = document.createElement("div");
-        card.classList.add("featured-card");
+        if (!usedPlaces.includes(place)) {
+            const card = document.createElement("div");
+            card.classList.add("featured-card");
+            card.innerHTML = `
+                <img src="${place.image}" alt="${place.name}" loading="lazy">
+                <h4>${place.name}</h4>
+            `;
+            card.addEventListener("click", () => {
+                window.location.href = "categories.html";
+            });
+            container.appendChild(card);
 
-        card.innerHTML = `
-            <img src="${place.image}" alt="${place.name}" loading="lazy">
-            <h4>${place.name}</h4>
-        `;
-        card.addEventListener("click", () => {
-            window.location.href = "categories.html";
-        });
-        container.appendChild(card);
+            usedPlaces.push(place);
+        }
     });
+
+    return usedPlaces;
 }
 
-// Llenar las tarjetas con actividades aleatorias
-displayFeaturedActivities("featured-container-1");
-displayFeaturedActivities("featured-container-2");
+let usedPlaces = []; 
+
+usedPlaces = displayFeaturedActivities("featured-container-1", usedPlaces);
+
+displayFeaturedActivities("featured-container-2", usedPlaces);
