@@ -25,15 +25,12 @@ function handleVisit() {
 
 document.addEventListener('DOMContentLoaded', handleVisit);
 
-// discover.js
 document.addEventListener("DOMContentLoaded", function() {
-    // Cargar el archivo JSON
     fetch('data/discover-data.json')
       .then(response => response.json())
       .then(itemsData => {
         const infoCardsContainer = document.querySelector('.info-cards');
   
-        // Recorrer los elementos del JSON y crear las tarjetas dinámicamente
         itemsData.forEach(item => {
           const card = document.createElement('div');
           card.classList.add('card');

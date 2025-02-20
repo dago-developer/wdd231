@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>What to do in Cumaná</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <meta name="description" content="This is my final project wod WDD131">
+        <meta name="author" content="Daniel Gonzalez">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta property="og:title" content="What to do in Cumaná"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://github.com/dago-developer/wdd231/blob/main/chamber/images/cumana.webp" />
+        <meta property="og:url" content="https://dago-developer.github.io/wdd231/chamber/"/>
+        <script src="scripts/getdate.js" defer></script>
+        <script src="scripts/featured.js" defer></script>
+        <script src="scripts/hamburgerbtn.js" defer></script>
+
+    </head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="div-logo">
+                <img class="logo" src="images/logocumana.png" alt="logo" loading="lazy">
+                <h1>What to do in Cumaná</h1>
+            </div>
+
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="join.html">Join</a>
+
+            
+                <div class="lenguage" id="lenguage">
+                    <button id="es-btn"><img src="images/spain.webp" alt="Spanish" loading="lazy"></button>
+                    <button id="en-btn"><img src="images/usa.webp" alt="English" loading="lazy"></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="section-1">
+            <div class="hero">
+                <h1>Watch what Cumaná have for you!</h1>
+                <h3>Your guide for cool places and activities</h3>
+                <button class="explore-btn" onclick="window.location.href='about.html'">Learn about Cumaná</button>
+
+            </div>
+            <div>
+                <div class="content">
+                    <h3>Have fun in our city!</h3>
+                    <div class="content-cards">
+                        <a href="categories.html" class="content-card">
+                            <img src="images/playa.png" alt="Beaches">
+                            <h4>Beaches <span>&gt;</span></h4>
+                            <p>Swim in these beautiful beaches and enjoy the sun.</p>
+                        </a>
+                        
+                        <a href="categories.html" class="content-card">
+                            <img src="images/historia.png" alt="History" loading="lazy">
+                            <h4>History <span>&gt;</span></h4>
+                            <p>Visit historical landmarks and learn about our rich past.</p>
+                        </a>
+
+                        <a href="categories.html" class="content-card">
+                            <img src="images/comida.png" alt="Food & Fun" loading="lazy">
+                            <h4>Food & Fun <span>&gt;</span></h4>
+                            <p>Enjoy delicious meals and fun places in the city.</p>
+                        </a>
+                    </div>
+                </div>
+
+        </section>
+        <section class="section-2">
+            <div class="card1">
+                <h3>Featured activities</h3>
+                <div class="featured-cards" id="featured-container-1"></div>
+            </div>
+            <div class="card2">
+                <h3>Try something new</h3>
+                <div class="featured-cards" id="featured-container-2"></div>
+            </div>
+        </section>
+        
+    </main> 
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | Created with ❤ by Daniel Gonzalez - WDD231 | Venezuela</p>
+            <p id="lastModified"></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
