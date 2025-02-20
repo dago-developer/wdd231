@@ -1,0 +1,355 @@
+:root {
+    --primary: #ffaf02;
+    --secondary: #1c8eb8;
+    --trhid: #17254e;
+    --background: #F4F4F4;
+    --text: #333333;
+    --text2: #fff4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--primary);
+    color: var(--trhid);
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.028);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    height: 80px;
+}
+
+/* Título */
+.header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+/* Logo y título juntos */
+.div-logo {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 900;
+    gap: 10px;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text2);
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    background-color: var(--secondary);
+    border-radius: 5px;
+}
+
+/* BOTONES DE IDIOMA */
+.lenguage {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lenguage button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--trhid);
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.lenguage button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.lenguage button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Menú hamburguesa (responsive) */
+.hamburger-menu {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--trhid);
+    transition: all 0.3s ease;
+}
+
+/* Cuando el menú está activo, cambia el ícono de hamburguesa a una "X" */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* HERO SECTION */
+.hero-about {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero-about img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+/* ABOUT CONTENT */
+/* ABOUT SECTIONS */
+.about-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.about-section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--trhid);
+    text-align: center;
+}
+
+.about-grid {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.about-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.about-text ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-section h3 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--trhid);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido del footer */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Texto */
+.footer p {
+    font-size: 14px;
+    margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#currentyear {
+    font-weight: bold;
+}
+
+#lastModified {
+    font-style: italic;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffaf02;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    /* Oculta los botones de idioma fuera del nav */
+    .header .lenguage {
+        display: none;
+    }
+
+    /* Muestra los botones de idioma dentro del nav */
+    .nav .lenguage {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Menú hamburguesa visible en pantallas pequeñas */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Menú de navegación oculto por defecto */
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Ajusta según el alto del header */
+        right: 0;
+        background-color: var(--primary);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .nav a {
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-content {
+        padding: 10px;
+    }
+}

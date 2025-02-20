@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="styles/categories.css">
+    <meta name="description" content="This is my final project wod WDD231">
+    <meta name="author" content="Daniel Gonzalez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="What to do in Cumaná"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/dago-developer/wdd231/blob/main/chamber/images/cumana.webp" />
+    <meta property="og:url" content="https://dago-developer.github.io/wdd231/chamber/"/>
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/hamburgerbtn.js" defer></script>
+    <script src="scripts/categories.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="div-logo">
+                <img class="logo" src="images/logocumana.png" alt="logo" loading="lazy">
+                <h1>What to do in Cumaná</h1>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="join.html">Join</a>
+
+            
+                <div class="lenguage" id="lenguage">
+                    <button id="es-btn"><img src="images/spain.webp" alt="Spanish" loading="lazy"></button>
+                    <button id="en-btn"><img src="images/usa.webp" alt="English" loading="lazy"></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Get to know unique places!</h1>
+        <section class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="beach">Beach</button>
+            <button class="filter-btn" data-category="history">History</button>
+            <button class="filter-btn" data-category="food & fun">Food & Fun</button>
+        </section>
+
+        <section class="places-container">
+        </section>
+    </main> 
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | Created with ❤ by Daniel Gonzalez - WDD231 | Venezuela</p>
+            <p id="lastModified"></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/categories.js" defer></script>
+</body>
+</html>

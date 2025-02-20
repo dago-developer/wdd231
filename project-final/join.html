@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>What to do in Cumaná</title>
-        <link rel="stylesheet" href="styles/index.css">
-        <meta name="description" content="This is my final project wod WDD131">
-        <meta name="author" content="Daniel Gonzalez">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <meta property="og:title" content="What to do in Cumaná"/>
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://github.com/dago-developer/wdd231/blob/main/chamber/images/cumana.webp" />
-        <meta property="og:url" content="https://dago-developer.github.io/wdd231/chamber/"/>
-        <script src="scripts/getdate.js" defer></script>
-        <script src="scripts/featured.js" defer></script>
-        <script src="scripts/hamburgerbtn.js" defer></script>
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="styles/join.css">
+    <meta name="description" content="This is my final project wod WDD231">
+    <meta name="author" content="Daniel Gonzalez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="What to do in Cumaná"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/dago-developer/wdd231/blob/main/chamber/images/cumana.webp" />
+    <meta property="og:url" content="https://dago-developer.github.io/wdd231/chamber/"/>
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/featured.js" defer></script>
+    <script src="scripts/hamburgerbtn.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
 <body>
     <header class="header">
         <div class="header-content">
@@ -28,7 +28,8 @@
                 <img class="logo" src="images/logocumana.png" alt="logo" loading="lazy">
                 <h1>What to do in Cumaná</h1>
             </div>
-
+            
+            <!-- Icono de hamburguesa para pantallas pequeñas -->
             <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -40,7 +41,6 @@
                 <a href="categories.html">Categories</a>
                 <a href="about.html">About</a>
                 <a href="join.html">Join</a>
-
             
                 <div class="lenguage" id="lenguage">
                     <button id="es-btn"><img src="images/spain.webp" alt="Spanish" loading="lazy"></button>
@@ -51,51 +51,44 @@
     </header>
     
     <main>
-        <section class="section-1">
-            <div class="hero">
-                <h1>Watch what Cumaná have for you!</h1>
-                <h3>Your guide for cool places and activities</h3>
-                <button class="explore-btn" onclick="window.location.href='about.html'">Learn about Cumaná</button>
+        <section class="join-section">
+            <h2>Stay Updated with New Places in Cumaná!</h2>
+            <p>Subscribe to our newsletter and be the first to know about new attractions, events, and recommendations.</p>
 
-            </div>
-            <div>
-                <div class="content">
-                    <h3>Have fun in our city!</h3>
-                    <div class="content-cards">
-                        <a href="categories.html" class="content-card">
-                            <img src="images/playa.png" alt="Beaches">
-                            <h4>Beaches <span>&gt;</span></h4>
-                            <p>Swim in these beautiful beaches and enjoy the sun.</p>
-                        </a>
-                        
-                        <a href="categories.html" class="content-card">
-                            <img src="images/historia.png" alt="History" loading="lazy">
-                            <h4>History <span>&gt;</span></h4>
-                            <p>Visit historical landmarks and learn about our rich past.</p>
-                        </a>
+            <!-- Formulario de registro -->
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="text" id="name" placeholder="First Name" required>
+                <input type="text" id="lastname" placeholder="Last Name" required>
+                <input type="number" id="age" placeholder="Age" min="1" max="120" required>
+                
+                <!-- Campo de selección de sexo -->
+                <select id="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
 
-                        <a href="categories.html" class="content-card">
-                            <img src="images/comida.png" alt="Food & Fun" loading="lazy">
-                            <h4>Food & Fun <span>&gt;</span></h4>
-                            <p>Enjoy delicious meals and fun places in the city.</p>
-                        </a>
-                    </div>
-                </div>
+                <textarea id="interests" placeholder="Tell us your interests (e.g., beaches, history, food)" rows="4" required></textarea>
 
-        </section>
-        <section class="section-2">
-            <div class="card1">
-                <h3>Featured activities</h3>
-                <div class="featured-cards" id="featured-container-1"></div>
-            </div>
-            <div class="card2">
-                <h3>Try something new</h3>
-                <div class="featured-cards" id="featured-container-2"></div>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                <p>Thank you for subscribing! Stay tuned for updates in your inbox.</p>
             </div>
         </section>
-        
+
+        <!-- Modal -->
+        <div id="email-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <p>You are already registered with this email. Please use another one.</p>
+        </div>
+</div>
     </main> 
-
 
     <footer class="footer">
         <div class="footer-content">
@@ -109,6 +102,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

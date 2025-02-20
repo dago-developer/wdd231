@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles/about.css">
+    <meta name="description" content="This is my final project wod WDD231">
+    <meta name="author" content="Daniel Gonzalez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="What to do in Cumaná"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/dago-developer/wdd231/blob/main/chamber/images/cumana.webp" />
+    <meta property="og:url" content="https://dago-developer.github.io/wdd231/chamber/"/>
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/featured.js" defer></script>
+    <script src="scripts/hamburgerbtn.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="div-logo">
+                <img class="logo" src="images/logocumana.png" alt="logo" loading="lazy">
+                <h1>What to do in Cumaná</h1>
+            </div>
+            
+            <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="join.html">Join</a>
+            
+                <div class="lenguage" id="lenguage">
+                    <button id="es-btn"><img src="images/spain.webp" alt="Spanish" loading="lazy"></button>
+                    <button id="en-btn"><img src="images/usa.webp" alt="English" loading="lazy"></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-about">
+            <img src="images/about1.webp" alt="Cumaná, Venezuela" loading="lazy">
+            <div class="hero-text">
+                <h2>About Cumaná</h2>
+                <p>Welcome to the oldest city in Venezuela! Discover its rich history, vibrant culture, and stunning landscapes.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h3>History of Cumaná</h3>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Cumaná was founded in 1521 by Gonzalo de Ocampo under the name "Nueva Toledo." It is considered one of the oldest European settlements in the Americas. The city played a crucial role during the colonial period as a hub for trade and commerce due to its strategic location on the northeastern coast of Venezuela.
+                    </p>
+                    <p>
+                        Throughout its history, Cumaná has faced numerous challenges, including pirate attacks, earthquakes, and economic fluctuations. Despite these hardships, the city has preserved its rich cultural heritage and remains a symbol of resilience and tradition.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about2.webp" alt="Historic Cumaná" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h3>Culture of Cumaná</h3>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/about3.webp" alt="Cultural Celebration" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <p>
+                        Cumaná is known for its vibrant culture, which blends indigenous, African, and Spanish influences. The city is famous for its traditional music, particularly the Gaita Sucrense, a genre that combines lively rhythms with poetic lyrics. During the Christmas season, locals celebrate with gaitas, dances, and colorful parades.
+                    </p>
+                    <p>
+                        The cuisine of Cumaná reflects its coastal location, with dishes like "cachapa" (corn pancake), "arepa," and fresh seafood being local favorites. Visitors can also enjoy festivals such as the Festival de la Gaita, which showcases the region's musical talent.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h3>Top Places to Visit in Cumaná</h3>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Cumaná offers a variety of attractions for visitors, from historical landmarks to natural wonders. Some must-see places include:
+                    </p>
+                    <ul>
+                        <li><strong>Castillo de San Antonio de la Eminencia:</strong> A historic fortress that once protected the city from pirate invasions.</li>
+                        <li><strong>Catedral de Cumaná:</strong> One of the oldest cathedrals in Venezuela, showcasing stunning colonial architecture.</li>
+                        <li><strong>Playa Colorada:</strong> A picturesque beach known for its reddish sand and calm waters.</li>
+                        <li><strong>Parque Nacional Mochima:</strong> A breathtaking national park featuring turquoise waters, islands, and diverse wildlife.</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/about4.webp" alt="Top Attractions" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main> 
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | Created with ❤ by Daniel Gonzalez - WDD231 | Venezuela</p>
+            <p id="lastModified"></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
