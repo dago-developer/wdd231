@@ -48,7 +48,26 @@ html, body {
     color: var(--secondary-color);
 }
 
-nav {
+.nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.nav-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.header.open .nav {
     display: flex;
 }
 
@@ -145,6 +164,54 @@ main {
     width: 100%;
 }
 
+/* Estilos para la vista móvil: */
+@media (max-width: 767px) {
+    .nav {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+        margin-top: 10px; /* Espacio entre el header y el nav */
+        position: absolute; /* Posiciona el nav debajo del header */
+        left: 0;
+        z-index: 900; /* Para asegurarse de que esté encima de otros elementos */
+    }
+
+    /* Icono de hamburguesa */
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: white;
+        z-index: 1000;
+    }
+
+    /* Mostrar el nav debajo del header cuando el header tenga la clase "open" */
+    .header.open .nav {
+        display: flex;
+    }
+}
+
+/* Para la vista desktop: */
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 0;
+        position: static; /* Se posiciona en su lugar dentro del header */
+        width: auto;
+    }
+
+    /* Ocultar el icono de hamburguesa en la vista desktop */
+    .nav-toggle {
+        display: none;
+    }
+}
+
 @media (min-width: 768px) {
     .card img {
         transition: transform 0.3s ease-in-out;
@@ -161,6 +228,30 @@ main {
         transition: none; /* Desactiva la transición en pantallas pequeñas */
         transform: none;  /* Elimina el efecto de transformación */
     }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: white;
+        z-index: 1000;
+    }
+
+    .header.open .nav {
+        display: flex;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -197,4 +288,3 @@ main {
         height: 200px; 
     }
 }
-

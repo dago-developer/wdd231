@@ -56,4 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 });
 
-  
+// discover.js
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.header').classList.toggle('open');
+});
