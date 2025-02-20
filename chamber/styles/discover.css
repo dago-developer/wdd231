@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #004466;
+    --secondary-color: #FFA500;
+    --background-color: #F4F4F4;
+    --text-color: #333333;
+    --font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; 
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 130px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+}
+
+main {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.discover-main h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card h2 {
+    color: var(--primary-color);
+}
+
+.card figure {
+    margin: 10px 0;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Ajustado para que las imágenes sean del mismo tamaño */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    display: block;  /* Asegura que la imagen no tenga espacio debajo */
+}
+
+.card address {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.card button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card button:hover {
+    background-color: var(--secondary-color);
+}
+
+#visitor-info {
+    margin-top: 20px;  /* Espacio desde la parte superior de 'main' */
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 20px;  /* Asegura que haya un pequeño espacio antes de las tarjetas */
+    position: relative;
+    z-index: 1;  /* Asegura que no quede detrás de otros elementos */
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .card img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card img:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Desactiva el hover en pantallas más pequeñas */
+@media (max-width: 767px) {
+    .card img {
+        transition: none; /* Desactiva la transición en pantallas pequeñas */
+        transform: none;  /* Elimina el efecto de transformación */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .info-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card1"; /* Ajustado a 3 columnas */
+    }
+
+    .card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8"; 
+    }
+    .card img {
+        width: 100%;
+        height: 200px; 
+    }
+}
+

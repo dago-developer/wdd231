@@ -1,0 +1,51 @@
+[
+      {
+        "name": "Playa San Luis",
+        "address": "Iglesia Santa Inés, Cumaná, Sucre",
+        "description": "Playa San Luis is a beautiful beach known for its clear waters and relaxing atmosphere, perfect for sunbathing and enjoying the coastal scenery.",
+        "image": "playasanluis.webp"
+      },
+      {
+        "name": "Avenida Perimetral",
+        "address": "Cumaná, Sucre",
+        "description": "Avenida Perimetral is a key road that offers scenic views of the city, leading you through historical landmarks and offering a lively atmosphere.",
+        "image": "avenidaperimetral.webp"
+      },
+      {
+        "name": "Iglesia Santa Inés",
+        "address": "Cumaná, Sucre",
+        "description": "The Iglesia Santa Inés is one of the most significant historical churches in Cumaná, renowned for its beautiful colonial architecture and serene atmosphere. It serves as a place of worship and cultural heritage.",
+        "image": "iglesia-santa-ines.webp"
+      },
+      {
+        "name": "Plaza Bolívar",
+        "address": "Cumaná, Sucre",
+        "description": "Plaza Bolívar is a central square in the city, dedicated to the liberator Simón Bolívar, surrounded by historical buildings and a peaceful park atmosphere.",
+        "image": "plazabolivar.webp"
+      },
+      {
+        "name": "Catedral de Cumaná",
+        "address": "Plaza Sucre, Cumaná, Sucre",
+        "description": "The Catedral de Cumaná is a beautiful colonial-era cathedral, with a majestic façade and rich history that dates back to the 18th century.",
+        "image": "catedral.webp"
+      },
+      {
+        "name": "Museo de Arte de Sucre",
+        "address": "Cumaná, Sucre",
+        "description": "The Museo de Arte de Sucre showcases a variety of local and regional art, offering visitors a glimpse into the rich cultural heritage of the area.",
+        "image": "museo.webp"
+      },
+      {
+        "name": "Parque Nacional Mochima",
+        "address": "Cumaná, Sucre",
+        "description": "Parque Nacional Mochima is a protected national park known for its diverse ecosystems, including beaches, forests, and abundant wildlife, perfect for outdoor activities.",
+        "image": "mochima.webp"
+      },
+      {
+        "name": "La Loma de la Cruz",
+        "address": "Cumaná, Sucre",
+        "description": "La Loma de la Cruz offers panoramic views of Cumaná and the surrounding area, providing a peaceful spot for reflection and appreciation of the landscape.",
+        "image": "cruz.webp"
+      }
+]
+  
