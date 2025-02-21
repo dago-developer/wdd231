@@ -1,4 +1,3 @@
-// Usamos el array original que ya habíamos creado
 const places = [
     {
         name: "Playa San Luis",
